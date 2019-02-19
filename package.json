@@ -1,0 +1,29 @@
+{
+  "name": "gatsby-plugin-client-side-redirect",
+  "version": "0.0.1",
+  "repository": "git@github.com:dhakerShiv/gatsby-plugin-client-side-redirect.git",
+  "author": "Shivnarayan Dhaker <shivnarayandhakar@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin"
+  ],
+  "scripts": {
+    "clean": "git clean -xdf ./*.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "fs-extra": "^7.0.0"
+  },
+  "devDependencies": {
+    "jest": "^22.1.4"
+  },
+  "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/"
+  }
+}

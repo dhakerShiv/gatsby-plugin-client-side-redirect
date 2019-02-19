@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`onPostBuild handles external redirects 1`] = `"<script>window.location.href=\\"http://example.com/\\"</script>"`;
+
+exports[`onPostBuild writes deep path redirects 1`] = `"<script>window.location.href=\\"/x/y/z/\\"</script>"`;
+
+exports[`onPostBuild writes redirects from root 1`] = `"<script>window.location.href=\\"/hello/\\"</script>"`;
+
+exports[`onPostBuild writes redirects to root 1`] = `"<script>window.location.href=\\"/\\"</script>"`;
