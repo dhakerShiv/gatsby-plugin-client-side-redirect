@@ -40,7 +40,7 @@ This will generate the following html files:
 ### `/old-url/index.html`:
 
 ```html
-<meta http-equiv="refresh" content="0; URL='/new-url/'" />
+<script>window.location.href="/new-url/"</script>
 ```
 
 You can use it using an node api provided by gatsby, for an example
