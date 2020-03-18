@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`clientSideRedirect allows existing leading and trailing forward slashes 1`] = `"<script>window.location.href=\\"/toPath/\\"</script>"`;
+exports[`clientSideRedirect allows existing leading and trailing forward slashes 1`] = `"<script>window.location.href=\\"/toPath\\"</script>"`;
 
-exports[`clientSideRedirect handles deep paths 1`] = `"<script>window.location.href=\\"/a/b/c/d/\\"</script>"`;
+exports[`clientSideRedirect handles deep paths 1`] = `"<script>window.location.href=\\"/a/b/c/d\\"</script>"`;
 
-exports[`clientSideRedirect handles offset wrapping forward slashes 1`] = `"<script>window.location.href=\\"/a/b/c/\\"</script>"`;
+exports[`clientSideRedirect handles offset wrapping forward slashes 1`] = `"<script>window.location.href=\\"/a/b/c\\"</script>"`;
 
 exports[`clientSideRedirect handles redirecting to a file 1`] = `"<script>window.location.href=\\"/test.txt\\"</script>"`;
 
@@ -18,8 +18,8 @@ exports[`clientSideRedirect leaves full urls untouched 2`] = `"<script>window.lo
 
 exports[`clientSideRedirect leaves full urls untouched 3`] = `"<script>window.location.href=\\"http://example.com/a/b/c\\"</script>"`;
 
-exports[`clientSideRedirect replaces duplicate slashes with single slash 1`] = `"<script>window.location.href=\\"/topath/a/\\"</script>"`;
+exports[`clientSideRedirect replaces duplicate slashes with single slash 1`] = `"<script>window.location.href=\\"/topath/a\\"</script>"`;
 
-exports[`clientSideRedirect trims leading and trailing whitespace 1`] = `"<script>window.location.href=\\"/toPath/\\"</script>"`;
+exports[`clientSideRedirect trims leading and trailing whitespace 1`] = `"<script>window.location.href=\\"/toPath\\"</script>"`;
 
-exports[`clientSideRedirect wraps path in forward slashes 1`] = `"<script>window.location.href=\\"/toPath/\\"</script>"`;
+exports[`clientSideRedirect wraps path in forward slashes 1`] = `"<script>window.location.href=\\"/toPath\\"</script>"`;
