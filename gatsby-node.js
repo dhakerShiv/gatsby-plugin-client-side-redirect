@@ -10,7 +10,7 @@ async function writeRedirectsFile(redirects, folder, pathPrefix) {
     const { fromPath, toPath } = redirect;
 
     let FILE_PATH
-    if (pathPrefix.endsWith(".html")) {
+    if (fromPath.endsWith(".html")) {
       // Allow redirects from file
       FILE_PATH = path.join(folder, fromPath.replace(pathPrefix, ''));
     } else {
