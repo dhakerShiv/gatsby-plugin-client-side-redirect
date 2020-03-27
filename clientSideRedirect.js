@@ -10,7 +10,7 @@ module.exports = function getMetaRedirect(toPath) {
       url = `/${url}`;
     }
     
-    if(hasTrailingSlash) {
+    if (hasTrailingSlash && url.length > 1) {
       url = url.slice(0, -1);
     }
 
