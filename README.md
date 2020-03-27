@@ -43,12 +43,12 @@ This will generate the following html files:
 <script>window.location.href="/new-url/"</script>
 ```
 
-You can use it using an node api provided by gatsby, for an example
+You can use it using the node api provided by gatsby, for an example
 Let's take `createPages`
 
 In you gatsby-node.js file, write following
 
-```
+```js
 exports.createPages = ({ graphql, actions }) => {
   const {createRedirect} = actions //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
   createRedirect({ fromPath: '/old-url', toPath: '/new-url', isPermanent: true });
@@ -58,7 +58,7 @@ exports.createPages = ({ graphql, actions }) => {
 Above approach is kind of hard code one, let's have a dynamic approach.
 Below code is just for understanding and use your schema accordingly
 
-```
+```js
 exports.createPages = async ({ graphql, actions }) => {
   const {createRedirect} = actions
 

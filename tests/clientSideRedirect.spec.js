@@ -42,4 +42,11 @@ describe('clientSideRedirect', () => {
   it('handles redirecting to a file in a folder', () => {
     expect(clientSideRedirect('a/b/test.txt')).toMatchSnapshot();
   });
+
+  it('handles not using xyz/index.html when the file ends with .html', () => {
+    expect(clientSideRedirect('a/b/c/d.html')).toEqual(`<script>window.location.href="/a/b/c/d.html"</script>`)
+    expect(clientSideRedirect('a/b/c/index.html')).toEqual(`<script>window.location.href="/a/b/c/index.html"</script>`)
+    expect(clientSideRedirect('a/b.html')).toEqual(`<script>window.location.href="/a/b.html"</script>`)
+  });
+
 });

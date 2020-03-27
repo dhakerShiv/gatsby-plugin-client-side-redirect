@@ -9,11 +9,19 @@ async function writeRedirectsFile(redirects, folder, pathPrefix) {
   for (const redirect of redirects) {
     const { fromPath, toPath } = redirect;
 
-    const FILE_PATH = path.join(
-      folder,
-      fromPath.replace(pathPrefix, ''),
-      'index.html'
-    );
+    let FILE_PATH
+    if (fromPath.endsWith(".html")) {
+      // Allow redirects from file
+      FILE_PATH = path.join(folder, fromPath.replace(pathPrefix, ''));
+    } else {
+      // If it's not a .html file, then use the xyz/index.html pattern 
+      // to support an exact link
+      FILE_PATH = path.join(
+        folder,
+        fromPath.replace(pathPrefix, ''),
+        'index.html'
+      );
+    }
 
     const fileExists = await exists(FILE_PATH);
     if (!fileExists) {
