@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-client-side-redirect",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "repository": "git@github.com:dhakerShiv/gatsby-plugin-client-side-redirect.git",
   "author": "Shivnarayan Dhaker <shivnarayandhakar@gmail.com>",
   "license": "MIT",
